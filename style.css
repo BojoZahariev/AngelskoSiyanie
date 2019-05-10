@@ -1,18 +1,20 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
+
 }
 
 .full-screen {
     background-image: url(images/auto-automobile-automotive-919073.jpg);
     filter: grayscale(100%);
-    background-color: brown;
-
+    background-color: #000;
     animation-name: graysc;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
+/*animation*/
 @keyframes graysc {
     from {
         filter: grayscale(100%);
@@ -75,16 +77,26 @@ body {
     font-size: 20px;
     z-index: 999;
     background-color: #000;
-
+    transition: all 1s;
+    max-height: 60px;
 }
 
-nav a {
-    font-size: 18px;
+.navigation {
+    overflow: hidden;
+    margin-right: 10px;
+    transition: all 1s;
 }
 
-.navigation a {
+
+
+#icon {
+    display: none;
+}
+
+.navigation li a {
     color: #ecf0f1;
-
+    font-size: 20px;
+    padding: 1em;
 }
 
 .navigation a:hover {
@@ -92,7 +104,7 @@ nav a {
     color: #fff;
 }
 
-/*head*/
+/*head title*/
 
 .title1,
 .title2 {
@@ -100,39 +112,306 @@ nav a {
     position: relative;
     color: #fff;
     top: 70vh;
-    left: 30%;
-
-    font-size: 60px;
+    text-shadow: 1px 1px black;
 }
+
+.title1 {
+    left: -60%;
+    font-size: 60px;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slide {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slide {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slide {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slide {
+    from {
+        left: -60%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
 
 .title2 {
     font-size: 80px;
-    left: 40vw;
+    left: -240%;
     padding-top: 20px;
+    animation-name: slide2;
+    animation-duration: 1s;
+    animation-delay: 3.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide2 {
+    from {
+        left: -240%;
+    }
+
+    to {
+        left: 40%;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slide2 {
+    from {
+        left: -240%;
+    }
+
+    to {
+        left: 40%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slide2 {
+    from {
+        left: -240%;
+    }
+
+    to {
+        left: 40%;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slide2 {
+    from {
+        left: -240%;
+    }
+
+    to {
+        left: 40%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slide2 {
+    from {
+        left: -240%;
+    }
+
+    to {
+        left: 40%;
+    }
 }
 
 .logo {
     position: absolute;
+    left: 10px;
     width: 60px;
+
     height: auto;
     align-self: flex-start;
-
 }
 
 .main {
-    background-color: #ecf0f1;
+    background-color: #F7FFF7;
+    margin-top: 20px;
 }
+
+.services-part {
+    position: relative;
+}
+
+.uslugi-img {
+    width: 100%;
+    height: 100%;
+    filter: opacity(80%);
+}
+
+.uslugi-img:hover {
+    filter: opacity(100%);
+}
+
+.text-on-img {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+
+
+
+
+
+
+
 
 
 @media all and (max-width: 800px) {
-    .logo {
-        display: none;
+    .navigation {
+        margin-left: 30px;
     }
 
+    .title1 {
+        font-size: 40px;
+        left: -160%;
+    }
+
+    @keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: 10%;
+        }
+    }
+
+    .title2 {
+        font-size: 60px;
+        right: -140%;
+    }
+
+    @keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: 20%;
+        }
+    }
 }
 
 @media all and (max-width: 600px) {
+
+    .nav {
+        max-height: 240px;
+    }
+
     .logo {
+        width: 45px;
+    }
+
+    .navigation {
+        justify-content: flex-end;
+    }
+
+    .navigation li:not(:first-child) {
+        display: none;
+    }
+
+    .navigation a:hover {
+        font-size: initial;
+        color: #fff;
+    }
+
+    .navigation li a {
+        font-size: 16px;
+    }
+
+    #icon {
         display: block;
     }
+
+    .title1 {
+        font-size: 30px;
+        left: -160%;
+    }
+
+    @keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: 9%;
+        }
+    }
+
+    .title2 {
+        font-size: 50px;
+        left: -140%;
+    }
+
+    @keyframes slide2 {
+        from {
+            left: -140%;
+        }
+
+        to {
+            left: 10%;
+        }
+    }
+}
+
+/*drop down menu*/
+@media screen and (max-width: 600px) {
+
+    .navigation.responsive li {
+        display: block;
+    }
+
+    .navigation.responsive {
+        position: relative;
+        top: -50px;
+        flex-flow: column;
+        text-align: center;
+        height: 300px;
+
+    }
+
+    .navigation.responsive>li>a {
+        font-size: 16px;
+    }
+
+    .navigation.responsive>li>a:hover {
+        font-size: 1.1em;
+        color: #fff;
+    }
+
+
 }
