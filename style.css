@@ -1,0 +1,138 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.full-screen {
+    background-image: url(images/auto-automobile-automotive-919073.jpg);
+    filter: grayscale(100%);
+    background-color: brown;
+
+    animation-name: graysc;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes graysc {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes graysc {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes graysc {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes graysc {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes graysc {
+    from {
+        filter: grayscale(100%);
+    }
+
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+/*nav*/
+
+.nav {
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    z-index: 999;
+    background-color: #000;
+
+}
+
+nav a {
+    font-size: 18px;
+}
+
+.navigation a {
+    color: #ecf0f1;
+
+}
+
+.navigation a:hover {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/*head*/
+
+.title1,
+.title2 {
+    font-family: 'Lobster', cursive;
+    position: relative;
+    color: #fff;
+    top: 70vh;
+    left: 30%;
+
+    font-size: 60px;
+}
+
+.title2 {
+    font-size: 80px;
+    left: 40vw;
+    padding-top: 20px;
+}
+
+.logo {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    align-self: flex-start;
+
+}
+
+.main {
+    background-color: #ecf0f1;
+}
+
+
+@media all and (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    .logo {
+        display: block;
+    }
+}
