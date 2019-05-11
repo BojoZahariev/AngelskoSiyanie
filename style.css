@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-/*animation*/
+/*Animation*/
 @keyframes graysc {
     from {
         filter: grayscale(100%);
@@ -83,7 +83,7 @@ body {
 
 .navigation {
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 20px;
     transition: all 1s;
 }
 
@@ -97,12 +97,14 @@ body {
     color: #ecf0f1;
     font-size: 20px;
     padding: 1em;
+    transition: 0.6s;
 }
 
 .navigation a:hover {
     font-size: 1.1em;
     color: #fff;
 }
+
 
 /*head title*/
 
@@ -116,6 +118,9 @@ body {
 }
 
 .title1 {
+    width: 660px;
+    text-align: center;
+
     left: -60%;
     font-size: 60px;
     animation-name: slide;
@@ -130,9 +135,10 @@ body {
     }
 
     to {
-        left: 30%;
+        left: calc((100% - 660px) / 2);
     }
 }
+
 
 /* Firefox < 16 */
 @-moz-keyframes slide {
@@ -141,7 +147,7 @@ body {
     }
 
     to {
-        left: 30%;
+        left: calc((100% - 660px) / 2);
     }
 }
 
@@ -152,7 +158,7 @@ body {
     }
 
     to {
-        left: 30%;
+        left: calc((100% - 660px) / 2);
     }
 }
 
@@ -163,7 +169,7 @@ body {
     }
 
     to {
-        left: 30%;
+        left: calc((100% - 660px) / 2);
     }
 }
 
@@ -174,20 +180,23 @@ body {
     }
 
     to {
-        left: 30%;
+        left: calc((100% - 660px) / 2);
     }
 }
 
 
 .title2 {
+    width: 670px;
+    text-align: center;
     font-size: 80px;
     left: -240%;
     padding-top: 20px;
-    animation-name: slide2;
+    animation-name: slide2, glow;
     animation-duration: 1s;
     animation-delay: 3.2s;
     animation-fill-mode: forwards;
 }
+
 
 @keyframes slide2 {
     from {
@@ -195,7 +204,7 @@ body {
     }
 
     to {
-        left: 40%;
+        left: calc((100% - 500px) / 2);
     }
 }
 
@@ -206,7 +215,7 @@ body {
     }
 
     to {
-        left: 40%;
+        left: calc((100% - 500px) / 2);
     }
 }
 
@@ -217,7 +226,7 @@ body {
     }
 
     to {
-        left: 40%;
+        left: calc((100% - 500px) / 2);
     }
 }
 
@@ -228,7 +237,7 @@ body {
     }
 
     to {
-        left: 40%;
+        left: calc((100% - 500px) / 2);
     }
 }
 
@@ -239,7 +248,7 @@ body {
     }
 
     to {
-        left: 40%;
+        left: calc((100% - 500px) / 2);
     }
 }
 
@@ -251,6 +260,9 @@ body {
     height: auto;
     align-self: flex-start;
 }
+
+
+/*Main*/
 
 .main {
     background-color: #F7FFF7;
@@ -292,10 +304,11 @@ body {
 
 @media all and (max-width: 800px) {
     .navigation {
-        margin-left: 30px;
+        margin-left: 40px;
     }
 
     .title1 {
+        width: 450px;
         font-size: 40px;
         left: -160%;
     }
@@ -306,11 +319,56 @@ body {
         }
 
         to {
-            left: 10%;
+            left: calc((100% - 450px) / 2);
         }
     }
 
+    @-moz-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 450px) / 2);
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 450px) / 2);
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 450px) / 2);
+        }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 450px) / 2);
+        }
+    }
+
+
     .title2 {
+        width: 470px;
         font-size: 60px;
         right: -140%;
     }
@@ -321,9 +379,54 @@ body {
         }
 
         to {
-            left: 20%;
+            left: calc((100% - 400px) / 2);
         }
     }
+
+    /* Firefox < 16 */
+    @-moz-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 400px) / 2);
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 400px) / 2);
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 400px) / 2);
+        }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 400px) / 2);
+        }
+    }
+
 }
 
 @media all and (max-width: 600px) {
@@ -349,6 +452,7 @@ body {
         color: #fff;
     }
 
+
     .navigation li a {
         font-size: 16px;
     }
@@ -357,7 +461,12 @@ body {
         display: block;
     }
 
+    #arrow {
+        display: none;
+    }
+
     .title1 {
+        width: 340px;
         font-size: 30px;
         left: -160%;
     }
@@ -368,12 +477,59 @@ body {
         }
 
         to {
-            left: 9%;
+            left: calc((100% - 340px) / 2);
         }
     }
 
+    @-moz-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 340px) / 2);
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 340px) / 2);
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 340px) / 2);
+        }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes slide {
+        from {
+            left: -160%;
+        }
+
+        to {
+            left: calc((100% - 340px) / 2);
+        }
+    }
+
+
+
+
     .title2 {
-        font-size: 50px;
+        width: 355px;
+        font-size: 45px;
         left: -140%;
     }
 
@@ -383,12 +539,58 @@ body {
         }
 
         to {
-            left: 10%;
+            left: calc((100% - 320px) / 2);
         }
     }
+
+    /* Firefox < 16 */
+    @-moz-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 320px) / 2);
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 320px) / 2);
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 320px) / 2);
+        }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes slide2 {
+        from {
+            right: -140%;
+        }
+
+        to {
+            left: calc((100% - 320px) / 2);
+        }
+    }
+
+
 }
 
-/*drop down menu*/
+/*dropdown menu*/
 @media screen and (max-width: 600px) {
 
     .navigation.responsive li {
@@ -409,8 +611,12 @@ body {
     }
 
     .navigation.responsive>li>a:hover {
-        font-size: 1.1em;
+        font-size: initial;
         color: #fff;
+    }
+
+    .navigation.responsive>.last:hover {
+        font-size: initial;
     }
 
 
