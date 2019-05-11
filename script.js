@@ -70,3 +70,47 @@ function showSlides(n) {
 	dots[slideIndex - 1].className += " active";
 	captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+
+//logo shrink 
+
+var home = document.getElementById("services");
+var sticky = home.offsetTop;
+var logo = document.getElementById("logoId");
+
+
+window.onscroll = function () {
+	if (window.innerWidth > 800) {
+		myFunction();
+	}
+};
+
+window.onresize = function () {
+	toggle();
+};
+
+function myFunction() {
+	if (window.pageYOffset > sticky - 250 || window.innerWidth < 800) {
+		logo.style.width = "60px";
+		logo.style.top = "0";
+	} else {
+		logo.style.width = "150px";
+		logo.style.top = "10px";
+	}
+}
+
+function toggle() {
+	if (window.innerWidth < 800) {
+		logo.style.width = "60px";
+
+	}
+	if (window.innerWidth < 600) {
+		logo.style.width = "45px";
+		logo.style.top = "0";
+	}
+	if (window.innerWidth > 800) {
+		logo.style.width = "150px";
+		logo.style.top = "10px";
+	}
+
+}
