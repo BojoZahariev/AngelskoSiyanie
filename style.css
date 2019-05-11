@@ -254,15 +254,14 @@ body {
 .logo {
     position: absolute;
     left: 10px;
-    width: 60px;
+    top: 10px;
+    width: 150px;
     height: auto;
     align-self: flex-start;
     transition: all 1s;
 }
 
-.logo:hover {
-    width: 200px;
-}
+
 
 /*Main*/
 
@@ -379,7 +378,7 @@ body {
     background-color: #222;
     padding: 10px 16px;
     color: white;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
 }
 
 
@@ -398,6 +397,11 @@ body {
 @media all and (max-width: 800px) {
     .navigation {
         margin-left: 40px;
+    }
+
+    .logo {
+        width: 60px;
+        top: 10px;
     }
 
     .title1 {
@@ -532,6 +536,7 @@ body {
 
     .logo {
         width: 45px;
+        top: 0;
     }
 
     .navigation {
