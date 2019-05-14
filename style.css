@@ -311,6 +311,7 @@ body {
     margin-bottom: 50px;
     position: relative;
     background-color: #222;
+    justify-content: center;
 }
 
 /* Hide the images by default */
@@ -358,6 +359,10 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
+.prev {
+    left: 0;
+}
+
 .prev:hover,
 .next:hover {
     background-color: #aaaaab;
@@ -391,6 +396,25 @@ body {
 .demo:hover {
     opacity: 1;
 }
+
+
+/*Testing*/
+
+.mySlides1,
+.mySlides2 .mySlides3 {
+    display: none
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+}
+
+
 
 @media all and (max-width: 800px) {
     .navigation {
