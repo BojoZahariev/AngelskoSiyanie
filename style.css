@@ -289,17 +289,20 @@ body {
 /*Interior*/
 
 .section-title {
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     font-weight: 700;
+    color: #fff;
+    background-color: #222;
+    margin-bottom: 10px;
 }
 
 .section-top {
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 30px;
-    padding: 100px 10px;
+    padding: 150px 10px;
 }
 
 
@@ -312,7 +315,10 @@ body {
 
 .mySlides1,
 .mySlides2,
-.mySlides3 {
+.mySlides3,
+.mySlides4,
+.mySlides5,
+.mySlides6 {
     display: none;
     position: relative;
     -webkit-animation-name: fade;
@@ -320,6 +326,28 @@ body {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 /*main pic*/
 .slides {
@@ -378,25 +406,7 @@ body {
 
 
 
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
 
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
 
 
 
@@ -405,7 +415,7 @@ body {
 
 @media all and (max-width: 800px) {
     .navigation {
-        margin-left: 40px;
+        margin-left: 50px;
     }
 
     .logo {
@@ -531,6 +541,8 @@ body {
             left: -o-calc((100% - 400px) / 2);
         }
     }
+
+
 }
 
 @media all and (max-width: 600px) {
@@ -691,13 +703,8 @@ body {
         font-size: 40px;
     }
 
-    .slides-under {
-        flex-basis: 50%;
-        order: 2;
-    }
-
-    .mySlides {
-        order: 1;
+    .section-top {
+        padding: 80px 10px;
     }
 }
 
