@@ -32,11 +32,14 @@ arrow.addEventListener(
 
 //Slides
 
-var slideIndex = [ 1, 1, 1 ];
-var slideId = [ 'mySlides1', 'mySlides2', 'mySlides3' ];
+var slideIndex = [1, 1, 1, 1, 1, 1];
+var slideId = ['mySlides1', 'mySlides2', 'mySlides3', 'mySlides4', 'mySlides5', 'mySlides6'];
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+showSlides(1, 5);
 
 function plusSlides(n, no) {
 	showSlides((slideIndex[no] += n), no);
@@ -63,13 +66,13 @@ var home = document.getElementById('services');
 var sticky = home.offsetTop;
 var logo = document.getElementById('logoId');
 
-window.onscroll = function() {
+window.onscroll = function () {
 	if (window.innerWidth > 800) {
 		myFunction();
 	}
 };
 
-window.onresize = function() {
+window.onresize = function () {
 	toggle();
 };
 
