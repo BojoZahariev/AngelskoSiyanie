@@ -294,8 +294,9 @@ body {
     padding: 20px;
     font-weight: 700;
     color: #fff;
-    background-color: #222;
+    background-color: #779ecb;
     margin-bottom: 10px;
+    text-shadow: 1px 1px black;
 }
 
 .section-top {
