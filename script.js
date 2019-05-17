@@ -30,7 +30,7 @@ arrow.addEventListener(
 	false
 );
 
-//Slides
+//Slides Services
 
 var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 var slideId = ['mySlides1', 'mySlides2', 'mySlides3', 'mySlides4', 'mySlides5', 'mySlides6', 'mySlides7', 'mySlides8', 'mySlides9'];
@@ -62,6 +62,44 @@ function showSlides(n, no) {
 	}
 	x[slideIndex[no] - 1].style.display = 'block';
 }
+
+
+//Slides Gallery
+
+var slideGalIndex = 1;
+showGalSlides(slideGalIndex);
+
+function plusGalSlides(n) {
+	showGalSlides(slideGalIndex += n);
+}
+
+function currentSlide(n) {
+	showGalSlides(slideGalIndex = n);
+}
+
+function showGalSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("demo");
+	var captionText = document.getElementById("caption");
+	if (n > slides.length) {
+		slideGalIndex = 1
+	}
+	if (n < 1) {
+		slideGalIndex = slides.length
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideGalIndex - 1].style.display = "block";
+	dots[slideGalIndex - 1].className += " active";
+	captionText.innerHTML = dots[slideGalIndex - 1].alt;
+}
+
+
 
 //logo shrink
 
