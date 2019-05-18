@@ -283,13 +283,13 @@ a {
     color: white;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 991px) {
     .navigation {
         justify-content: space-around;
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
 
 
     .navigation li:last-of-type a {
