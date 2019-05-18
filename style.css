@@ -836,7 +836,7 @@ body {
 
 	.section-top {
 		padding: 30px 10px 60px;
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.section-title {
@@ -878,5 +878,18 @@ body {
 
 	.navigation.responsive > .last:hover {
 		font-size: initial;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	.title1 {
+		width: 300px;
+		font-size: 25px;
+	}
+
+	.title2 {
+		width: 310px;
+		font-size: 27px;
+		left: -140%;
 	}
 }
