@@ -5,8 +5,11 @@ body {
 .full-screen {
 	background-image: url(images/cover-resized.jpg);
 	filter: grayscale(100%);
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	background-color: #000;
 	animation-name: graysc;
@@ -679,6 +682,10 @@ body {
 }
 
 @media all and (max-width: 768px) {
+	body {
+		height: 100vh;
+	}
+
 	.nav {
 		max-height: 240px;
 	}
