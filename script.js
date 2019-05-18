@@ -1,313 +1,143 @@
-/* RESET
-*/
+var bars = document.getElementById('bars');
+var nav = document.getElementById('myTopnav');
+var arrow = document.getElementById('arrow');
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
+function miniNav() {
+	if (nav.className === 'navigation') {
+		nav.className += ' responsive';
+		bars.style.display = 'none';
+		arrow.style.display = 'block';
+	} else {
+		nav.className = 'navigation';
+		bars.style.display = 'block';
+		arrow.style.display = 'none';
+	}
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+bars.addEventListener(
+	'click',
+	() => {
+		miniNav();
+	},
+	false
+);
+
+arrow.addEventListener(
+	'click',
+	() => {
+		miniNav();
+	},
+	false
+);
+
+//Slides Services
+
+var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+var slideId = ['mySlides1', 'mySlides2', 'mySlides3', 'mySlides4', 'mySlides5', 'mySlides6', 'mySlides7', 'mySlides8', 'mySlides9'];
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+showSlides(1, 5);
+showSlides(1, 6);
+showSlides(1, 7);
+showSlides(1, 8);
+
+function plusSlides(n, no) {
+	showSlides((slideIndex[no] += n), no);
 }
 
-body {
-    line-height: 1;
-    font-family: 'Roboto', sans-serif;
+function showSlides(n, no) {
+	var i;
+	var x = document.getElementsByClassName(slideId[no]);
+	if (n > x.length) {
+		slideIndex[no] = 1;
+	}
+	if (n < 1) {
+		slideIndex[no] = x.length;
+	}
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = 'none';
+	}
+	x[slideIndex[no] - 1].style.display = 'block';
 }
 
-ol,
-ul {
-    list-style: none;
+
+//Slides Gallery
+
+var slideGalIndex = 1;
+showGalSlides(slideGalIndex);
+
+function plusGalSlides(n) {
+	showGalSlides(slideGalIndex += n);
 }
 
-blockquote,
-q {
-    quotes: none;
+function currentSlide(n) {
+	showGalSlides(slideGalIndex = n);
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+function showGalSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("demo");
+	var captionText = document.getElementById("caption");
+	if (n > slides.length) {
+		slideGalIndex = 1
+	}
+	if (n < 1) {
+		slideGalIndex = slides.length
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideGalIndex - 1].style.display = "block";
+	dots[slideGalIndex - 1].className += " active";
+	captionText.innerHTML = dots[slideGalIndex - 1].alt;
 }
 
 
 
-/*Layout*/
+//logo shrink
 
+var home = document.getElementById('services');
+var sticky = home.offsetTop;
+var logo = document.getElementById('logoId');
 
-/*clearfix*/
-.row:after {
-    display: table;
-    clear: both;
-    content: '';
+window.onscroll = function () {
+	if (window.innerWidth > 991) {
+		myFunction();
+	}
+};
+
+window.onresize = function () {
+	toggle();
+};
+
+function myFunction() {
+	if (window.pageYOffset > sticky - 250 || window.innerWidth < 991) {
+		logo.style.width = '60px';
+		logo.style.top = '0';
+	} else {
+		logo.style.width = '150px';
+		logo.style.top = '10px';
+	}
 }
 
-/*containers*/
-
-.container {
-    width: 100%;
-    padding: 0px;
-}
-
-
-
-.full-screen {
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-/*row*/
-.row {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-
-.col1,
-.col2,
-.col3,
-.col4,
-.col5,
-.col6,
-.col7,
-.col8,
-.col9,
-.col10,
-.col11,
-.col12 {
-    padding: 10px;
-}
-
-.col1 {
-    flex-basis: 8.333%;
-}
-
-.col2 {
-    flex-basis: 16.666%;
-}
-
-.col3 {
-    flex-basis: 25%;
-}
-
-.col4 {
-    flex-basis: 33.333%;
-}
-
-.col5 {
-    flex-basis: 41.666%;
-}
-
-.col6 {
-    flex-basis: 50%;
-
-}
-
-.col7 {
-    flex-basis: 58.333%;
-}
-
-.col8 {
-    flex-basis: 66.666%;
-}
-
-.col9 {
-    flex-basis: 75%;
-}
-
-.col10 {
-    flex-basis: 83.333%;
-}
-
-.col11 {
-    flex-basis: 91.666%;
-}
-
-.col12 {
-    flex-basis: 100%;
-}
-
-
-
-
-/*misc*/
-
-
-.image {
-    max-width: 100%;
-    padding: 0px;
-    height: auto;
-    background-color: #000;
-}
-
-a {
-    text-decoration: none;
-}
-
-/*navigation*/
-.navigation {
-    list-style: none;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-
-}
-
-.navigation a {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color: white;
-}
-
-@media all and (max-width: 991px) {
-    .navigation {
-        justify-content: space-around;
-    }
-}
-
-@media all and (max-width: 768px) {
-
-
-    .navigation li:last-of-type a {
-        border-bottom: none;
-    }
-
-    .col1,
-    .col2,
-    .col3,
-    .col4,
-    .col5,
-    .col6,
-    .col7,
-    .col8,
-    .col9,
-    .col10,
-    .col11,
-    .col12 {
-        flex-basis: 100%;
-    }
+function toggle() {
+	if (window.innerWidth < 991) {
+		logo.style.width = '60px';
+		logo.style.top = '0';
+	}
+	if (window.innerWidth < 768) {
+		logo.style.width = '45px';
+		logo.style.top = '0';
+	}
+	if (window.innerWidth > 991) {
+		logo.style.width = '150px';
+		logo.style.top = '10px';
+	}
 }
