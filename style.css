@@ -3,7 +3,7 @@ body {
 }
 
 .full-screen {
-	background-image: url(images/auto-automobile-automotive-919073.jpg);
+	background-image: url(images/cover-resized.jpg);
 	filter: grayscale(100%);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -857,10 +857,6 @@ body {
 
 /*dropdown menu*/
 @media screen and (max-width: 768px) {
-	.full-screen {
-		background-image: url(images/farove.jpg);
-	}
-
 	.navigation.responsive li {
 		display: block;
 	}
