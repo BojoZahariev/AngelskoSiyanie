@@ -3,7 +3,7 @@ body {
 }
 
 .full-screen {
-	background-image: url(images/cover-resized.jpg);
+	background-image: url(images/auto-resized3.jpg);
 	filter: grayscale(100%);
 	background-position: center center;
 	background-repeat: no-repeat;
