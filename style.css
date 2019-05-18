@@ -413,7 +413,7 @@ body {
 /*Text next to slides*/
 .text-nextto {
     color: #222;
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px 20px;
     align-self: center;
 }
@@ -519,7 +519,7 @@ body {
 
 /*MEDIA*/
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 991px) {
     .navigation {
         margin-left: 50px;
     }
@@ -654,7 +654,7 @@ body {
 
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
     .nav {
         max-height: 240px;
     }
@@ -831,7 +831,7 @@ body {
 }
 
 /*dropdown menu*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .navigation.responsive li {
         display: block;
     }
