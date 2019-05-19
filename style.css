@@ -3,7 +3,7 @@ body {
 }
 
 .full-screen {
-	background-image: url(images/auto-resized3.jpg);
+	background-image: url(images/cover-resized2.jpg);
 	filter: grayscale(100%);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -684,6 +684,10 @@ body {
 @media all and (max-width: 768px) {
 	body {
 		height: 100vh;
+	}
+
+	.full-screen {
+		background-image: url(images/cover-1000px.jpg);
 	}
 
 	.nav {
