@@ -126,7 +126,7 @@ body {
 	font-size: 60px;
 	animation-name: slide;
 	animation-duration: 1s;
-	animation-delay: 3s;
+	animation-delay: 1.5s;
 	animation-fill-mode: forwards;
 }
 
@@ -192,7 +192,7 @@ body {
 	padding-top: 20px;
 	animation-name: slide2, glow;
 	animation-duration: 1s;
-	animation-delay: 3.2s;
+	animation-delay: 1.7s;
 	animation-fill-mode: forwards;
 }
 
@@ -687,7 +687,7 @@ body {
 	}
 
 	.full-screen {
-		background-image: url(images/cover-1000px.jpg);
+		background-image: url(images/cover-resized800x900.jpg);
 	}
 
 	.nav {
