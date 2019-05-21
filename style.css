@@ -339,8 +339,20 @@ body {
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-    border: 2px solid #222;
     padding: 0px;
+    box-shadow: 0 2px 4px 0 #222, 0 3px 10px 0 #222;
+}
+
+.mySlides1:hover,
+.mySlides2:hover,
+.mySlides3:hover,
+.mySlides4:hover,
+.mySlides5:hover,
+.mySlides6:hover,
+.mySlides7:hover,
+.mySlides8:hover,
+.mySlides9:hover {
+    box-shadow: 0 4px 8px 0 #222, 0 6px 20px 0 #222;
 }
 
 @-webkit-keyframes fade {
@@ -450,6 +462,8 @@ body {
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
+    box-shadow: 0 2px 4px 0 #222, 0 3px 10px 0 #222;
+    padding: 0;
 }
 
 .gallery-img {
@@ -500,6 +514,7 @@ body {
     font-size: 20px;
     background-color: #222;
     color: white;
+    margin-top: 10px;
 }
 
 /* Add a transparency effect for thumnbail images */
