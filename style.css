@@ -588,6 +588,23 @@ body {
 }
 
 
+
+/*map*/
+
+.map-row {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 #222, 0 3px 10px 0 #222;
+}
+
+
 /*Footer*/
 
 .footer-text {
@@ -929,6 +946,10 @@ body {
 
     .gallery-bottom {
         display: none;
+    }
+
+    .gmap_canvas {
+        height: 400px;
     }
 }
 
