@@ -129,15 +129,14 @@ body {
     text-align: center;
     left: -60%;
     font-size: 60px;
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-
     -webkit-animation-name: slide;
+    animation-name: slide;
     -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 @keyframes slide {
@@ -179,7 +178,7 @@ body {
     }
 
     to {
-        left: calc((100% - 660px) / 2);
+        left: -ms-calc((100% - 660px) / 2);
     }
 }
 
@@ -200,9 +199,13 @@ body {
     font-size: 80px;
     left: -240%;
     padding-top: 20px;
-    animation-name: slide2, glow;
+    -webkit-animation-name: slide2;
+    animation-name: slide2;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-delay: 1.7s;
     animation-delay: 1.7s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -245,7 +248,7 @@ body {
     }
 
     to {
-        left: calc((100% - 500px) / 2);
+        left: -ms-calc((100% - 500px) / 2);
     }
 }
 
