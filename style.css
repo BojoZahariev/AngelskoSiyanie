@@ -16,6 +16,11 @@ body {
     animation-duration: 1s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
+
+    -webkit-animation-name: graysc;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
     overflow: hidden;
 }
 
@@ -128,6 +133,11 @@ body {
     animation-duration: 1s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
+
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes slide {
