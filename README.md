@@ -1,2 +1,2 @@
 # AngelskoSiyanie
-A simple website for a bulgarian garage.
+A static website for a bulgarian garage.
