@@ -1,7 +1,7 @@
 # AngelskoSiyanie
 ## Static website for a bulgarian garage.
 
-### Tools: Vanilla JS, HTML, CSS.
+### Tools: JavaScript, HTML, CSS.
 
 
 ![Image of Angelsko Siyanie](https://github.com/BojoZahariev/AngelskoSiyanie/blob/master/images/CaptureAngelskoSiyanie.PNG)
