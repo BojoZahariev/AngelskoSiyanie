@@ -1,5 +1,5 @@
 # AngelskoSiyanie
-## A static website for a bulgarian garage.
+## Static website for a bulgarian garage.
 
 ### Tools: Vanilla JS, HTML, CSS.
 
